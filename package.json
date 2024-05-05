@@ -1,0 +1,45 @@
+{
+	"name": "@angusmiguel/terminal-app-template",
+	"version": "0.0.1",
+	"description": "Template to create terminal interactions.",
+	"main": "./dist/index.js",
+	"types": "./dist/types.d.ts",
+	"files": [
+		"./dist"
+	],
+	"bin": {
+		"run": "./dist/index.js"
+	},
+	"scripts": {
+		"test": "ts-node ./src/index.ts",
+		"test_build": "node ./dist/index.js",
+		"build": "rimraf dist && tsup",
+		"pub": "pnpm publish --access public && git push -f",
+		"pub_patch": "pnpm version patch --force && pnpm publish --access public && git push -f",
+		"pub_minor": "pnpm version minor --force && pnpm publish --access public && git push -f",
+		"pub:major": "pnpm version major --force && pnpm publish --access public && git push -f"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@types/prompts": "^2.4.9",
+		"prompts": "^2.4.2"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.7.2",
+		"@types/node": "^20.12.8",
+		"rimraf": "^5.0.5",
+		"ts-node": "^10.9.2",
+		"tslib": "^2.6.2",
+		"tsup": "^8.0.2",
+		"typescript": "^5.4.5"
+	},
+	"engines": {
+		"node": ">= 18.0.0"
+	},
+	"bugs": {
+		"url": "https://github.com/dangus21/esconfigs/issues"
+	},
+	"homepage": "https://github.com/dangus21/esconfigs#readme"
+}
